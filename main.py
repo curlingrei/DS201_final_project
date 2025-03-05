@@ -2,9 +2,14 @@ import data_management as dm
 import pandas as pd
 
 def main():
+    csv_file_name = "sample_data.csv"
+    df = dm.import_csv("sample_data.csv")
+    df['Date'] = pd.to_datetime(df['Date'])
+
     print("=== Personal Finance Tracker ===")
+    print(f"Note: Current data was imported from {csv_file_name}.")
+
     menus = [
-        "Import a CSV File",
         "View All Transactions",
         "View Transactions by Date Range",
         "Add a Transaction",
@@ -25,9 +30,11 @@ def main():
     if choice not in list(map(str, range(1, len(menus) + 1))):
       print(f"Invalid input! You need to input a number from 1~{len(menus)}")
 
+
     if choice == "1":
-      data = dm.import_csv("sample_data.csv")
-      print(data)
+        dm.view_all_transactions( df)
+    elif choice == "2":
+        dm.view_transactions_by_date_range(df)
 
 if __name__ == "__main__":
     main()
