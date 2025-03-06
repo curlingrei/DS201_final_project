@@ -16,4 +16,3 @@ ax = total_by_category.plot(kind = 'pie',
 print(total_by_category)
 ax.set_title("Spending by Category")
 plt.show()
-
