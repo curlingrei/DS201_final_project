@@ -1,6 +1,7 @@
 import data_management as dm
 import visualization as vi
 import pandas as pd
+import export_csv as ec
 
 def main():
     csv_file_name = "sample_data.csv"
@@ -39,6 +40,10 @@ def main():
         dm.view_transactions_by_date_range(df)
     elif choice == "9":
         vi.select_chart(df)
+    elif choice == "10":
+        ## change from ec to vi later
+        ec.export_csv(df)
+
 
 if __name__ == "__main__":
     main()
