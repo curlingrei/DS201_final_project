@@ -13,6 +13,6 @@ ax = total_by_category.plot(kind = 'pie',
                       startangle=90,
                       ylabel="",
                       legend=False)
-print(total_by_category)
 ax.set_title("Spending by Category")
+print(total_by_category)
 plt.show()
