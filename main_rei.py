@@ -1,5 +1,6 @@
 import data_management as dm
 import visualization as vi
+import budget_management as bm
 import pandas as pd
 import export_csv as ec
 
@@ -23,6 +24,7 @@ def main():
         "Show Top Spending Category",
         "Visualize Monthly Spending Trend",
         "Save Transactions to CSV",
+        "Compare between income and spending",
         "Exit"]
 
     for index in range(len(menus)):
@@ -43,6 +45,9 @@ def main():
     elif choice == "10":
         ## change from ec to vi later
         ec.export_csv(df)
+    elif choice == "11":
+        ## change from ec to vi later
+        bm.compare_balance(df)
 
 
 if __name__ == "__main__":
