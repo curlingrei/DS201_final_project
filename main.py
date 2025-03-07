@@ -38,6 +38,8 @@ def main():
         dm.view_transactions_by_date_range(df)
     elif choice == "6":
         da.spending_total_by_category(df)
+    elif choice == "8":
+        da.show_top_category(df)
 
 
 if __name__ == "__main__":

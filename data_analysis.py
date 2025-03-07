@@ -7,12 +7,11 @@ import pandas as pd
 csv_file_name = "sample_data.csv"
 df = dm.import_csv("sample_data.csv")
 
+inclusive_df = df[df['Type'] == "Expense"]
+
+total_by_category = inclusive_df.groupby("Category")["Amount"].sum()
 #total amount per category
 def spending_total_by_category(df):
-
-    inclusive_df = df[df['Type'] == "Expense"]
-
-    total_by_category = inclusive_df.groupby("Category")["Amount"].sum()
 
     total_by_category.plot(kind = 'bar',
                                    title = 'Total spending by Category',
@@ -20,6 +19,12 @@ def spending_total_by_category(df):
                                     rot = 45)
     print(total_by_category)
     plt.show()
+
+#Top spending category
+def show_top_category(df):
+    top_spending_category = total_by_category.idxmax()
+    print(f"Top Spending Category is {top_spending_category}")
+
 
 
 
