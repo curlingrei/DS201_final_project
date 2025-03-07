@@ -1,4 +1,5 @@
 import data_management as dm
+import data_analysis as da
 import pandas as pd
 
 def main():
@@ -32,9 +33,12 @@ def main():
 
 
     if choice == "1":
-        dm.view_all_transactions( df)
+        dm.view_all_transactions(df)
     elif choice == "2":
         dm.view_transactions_by_date_range(df)
+    elif choice == "6":
+        da.spending_total_by_category(df)
+
 
 if __name__ == "__main__":
     main()
