@@ -12,5 +12,6 @@ def compare_balance(df):
     pie_chart.set_ylabel("")
     plt.title("The proportion of total amount by categories")
     pie_chart.legend(title="Category", loc="center left", bbox_to_anchor=(0.9, 0.8))
-    plt.show()
+    plt.show(block=False)
+    input("Enter something: ")
 
