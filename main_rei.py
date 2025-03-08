@@ -40,6 +40,8 @@ def main():
         dm.view_all_transactions(df)
     elif choice == "2":
         dm.view_transactions_by_date_range(df)
+    elif choice == "3":
+        dm.add_transaction(df)
     elif choice == "9":
         vi.select_chart(df)
     elif choice == "10":

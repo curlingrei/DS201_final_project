@@ -4,13 +4,15 @@ import data_management as dm
 
 def select_chart(df):
     while True:
-        chart_number = input("1. Monthly Total Spending 2: Total Spending by Categories 3. The Proportion of Total Spending by Categories.\nSelect a chart by number(1-3): ")
+        chart_number = input("1. Monthly Total Spending 2: Total Spending by Categories 3. The Proportion of Total Spending by Categories. 4. Exit \nSelect a chart by number(1-4): ")
         if chart_number == "1":
             visualize_line(df)
         elif chart_number == "2":
             visualize_bar(df)
         elif chart_number == "3":
             visualize_pie(df)
+        elif chart_number == "4":
+            break
         else:
             print("Invalid Input! You need to input 1, 2 or 3")
 
